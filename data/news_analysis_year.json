@@ -1,0 +1,125 @@
+{
+  "corpus_unique": 1097,
+  "n_sample": 260,
+  "frames_v2": {
+    "other": 119,
+    "machine": 37,
+    "org": 70,
+    "explainer": 34
+  },
+  "frames_v2_pct": {
+    "other": 45.8,
+    "machine": 14.2,
+    "org": 26.9,
+    "explainer": 13.1
+  },
+  "mechanisms": {
+    "registration": 15,
+    "authorization": 42,
+    "accountability": 21
+  },
+  "mechanisms_pct": {
+    "registration": 5.8,
+    "authorization": 16.2,
+    "accountability": 8.1
+  },
+  "top_domains": [
+    [
+      "finance.yahoo.com",
+      19
+    ],
+    [
+      "forbes.com",
+      18
+    ],
+    [
+      "finanznachrichten.de",
+      12
+    ],
+    [
+      "manilatimes.net",
+      11
+    ],
+    [
+      "pymnts.com",
+      9
+    ],
+    [
+      "prnewswire.com",
+      8
+    ],
+    [
+      "biometricupdate.com",
+      7
+    ],
+    [
+      "bankinfosecurity.com",
+      7
+    ],
+    [
+      "news.webindia123.com",
+      5
+    ],
+    [
+      "thefastmode.com",
+      5
+    ],
+    [
+      "webpronews.com",
+      5
+    ],
+    [
+      "thehindubusinessline.com",
+      4
+    ]
+  ],
+  "countries": [
+    [
+      "United States",
+      148
+    ],
+    [
+      "India",
+      31
+    ],
+    [
+      "United Kingdom",
+      15
+    ],
+    [
+      "Philippines",
+      12
+    ],
+    [
+      "Germany",
+      12
+    ],
+    [
+      "Australia",
+      6
+    ],
+    [
+      "New Zealand",
+      6
+    ],
+    [
+      "Japan",
+      5
+    ]
+  ],
+  "by_month_sample": {
+    "202507": 20,
+    "202508": 20,
+    "202509": 20,
+    "202510": 20,
+    "202511": 20,
+    "202512": 20,
+    "202601": 20,
+    "202602": 20,
+    "202603": 20,
+    "202604": 20,
+    "202605": 20,
+    "202606": 20,
+    "202607": 20
+  }
+}

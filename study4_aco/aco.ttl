@@ -1,0 +1,81 @@
+@prefix aco:  <https://example.org/aco#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/aco> a owl:Ontology ;
+    rdfs:label "Agency Configuration Ontology (ACO)" ;
+    rdfs:comment "A minimal ontology formalizing how agency is configured in agentic-AI infrastructures through three mechanisms: registration, authorization, and accountability. Distilled from Palantir Foundry's Ontology documentation and the A2A protocol specification v1.0." .
+
+#################################################################
+# Actors
+#################################################################
+
+aco:Actor a owl:Class ;
+    rdfs:comment "Any entity registered as capable of action in the system's world. Unregistered entities cannot act." .
+
+aco:HumanPrincipal a owl:Class ;
+    rdfs:subClassOf aco:Actor ;
+    rdfs:comment "A human positioned as task initiator, supplementary input provider, and authorizer (A2A role: user)." .
+
+aco:MachineAgent a owl:Class ;
+    rdfs:subClassOf aco:Actor ;
+    rdfs:comment "A software entity whose agency is constituted by a published, verifiable AgentCard (A2A role: agent)." .
+
+#################################################################
+# Registration mechanism
+#################################################################
+
+aco:AgentCard a owl:Class ;
+    rdfs:comment "Self-description that constitutes the agent as an actor: name, provider, skills, capabilities, securitySchemes, signature (A2A spec v1.0)." .
+
+aco:Capability a owl:Class ;
+    rdfs:comment "A declared unit of skill; what the agent claims it can do." .
+
+aco:hasCard a owl:ObjectProperty ;
+    rdfs:domain aco:MachineAgent ; rdfs:range aco:AgentCard ;
+    rdfs:comment "Registration: to be an agent is to have a published card." .
+
+aco:declares a owl:ObjectProperty ;
+    rdfs:domain aco:AgentCard ; rdfs:range aco:Capability .
+
+#################################################################
+# Authorization mechanism
+#################################################################
+
+aco:ActionType a owl:Class ;
+    rdfs:comment "A verb pre-defined in the ontology (Palantir: action types). The repertoire of possible actions is written at design time." .
+
+aco:Permission a owl:Class ;
+    rdfs:comment "Fine-grained right to execute an ActionType within a scope, under a security scheme." .
+
+aco:requiresPermission a owl:ObjectProperty ;
+    rdfs:domain aco:ActionType ; rdfs:range aco:Permission .
+
+aco:grantedTo a owl:ObjectProperty ;
+    rdfs:domain aco:Permission ; rdfs:range aco:Actor ;
+    rdfs:comment "Agents and humans share one permission model (Palantir: agent access matching human permissions)." .
+
+aco:requiresHumanApproval a owl:DatatypeProperty ;
+    rdfs:domain aco:ActionType ; rdfs:range xsd:boolean ;
+    rdfs:comment "Institutionalized human checkpoint (A2A task state: auth-required)." .
+
+#################################################################
+# Accountability mechanism
+#################################################################
+
+aco:Task a owl:Class ;
+    rdfs:comment "Stateful unit of work with lifecycle: submitted, working, input-required, auth-required, completed, failed, canceled, rejected (A2A spec v1.0)." .
+
+aco:AuditRecord a owl:Class ;
+    rdfs:comment "Decision lineage entry: actor, action, time, outcome. Record-keeping accountability without reason-giving." .
+
+aco:performedBy a owl:ObjectProperty ;
+    rdfs:domain aco:Task ; rdfs:range aco:MachineAgent .
+
+aco:authorizes a owl:ObjectProperty ;
+    rdfs:domain aco:HumanPrincipal ; rdfs:range aco:Task ;
+    rdfs:comment "Human intervention window: transition out of auth-required." .
+
+aco:recordedIn a owl:ObjectProperty ;
+    rdfs:domain aco:Task ; rdfs:range aco:AuditRecord .

@@ -1,0 +1,200 @@
+{
+  "n_videos": 138,
+  "total_words": 987600,
+  "median_views": 80211,
+  "upload_months": {
+    "202507": 8,
+    "202508": 10,
+    "202509": 6,
+    "202510": 14,
+    "202511": 9,
+    "202512": 11,
+    "202601": 7,
+    "202602": 9,
+    "202603": 10,
+    "202604": 13,
+    "202605": 14,
+    "202606": 14,
+    "202607": 13
+  },
+  "top_agent_verbs": [
+    [
+      "card",
+      50
+    ],
+    [
+      "use",
+      34
+    ],
+    [
+      "needs",
+      32
+    ],
+    [
+      "system",
+      29
+    ],
+    [
+      "registry",
+      28
+    ],
+    [
+      "systems",
+      26
+    ],
+    [
+      "work",
+      22
+    ],
+    [
+      "from",
+      22
+    ],
+    [
+      "agent",
+      21
+    ],
+    [
+      "like",
+      20
+    ],
+    [
+      "using",
+      20
+    ],
+    [
+      "talk",
+      20
+    ],
+    [
+      "protocol",
+      20
+    ],
+    [
+      "right",
+      19
+    ],
+    [
+      "works",
+      19
+    ],
+    [
+      "doesn",
+      19
+    ],
+    [
+      "executor",
+      19
+    ],
+    [
+      "framework",
+      19
+    ],
+    [
+      "here",
+      17
+    ],
+    [
+      "try",
+      17
+    ]
+  ],
+  "lexicon_per_10k": {
+    "autonomy": {
+      "raw": 271,
+      "per_10k": 2.74
+    },
+    "human_in_loop": {
+      "raw": 1392,
+      "per_10k": 14.09
+    },
+    "registration": {
+      "raw": 414,
+      "per_10k": 4.19
+    },
+    "authorization": {
+      "raw": 1078,
+      "per_10k": 10.92
+    },
+    "accountability": {
+      "raw": 569,
+      "per_10k": 5.76
+    },
+    "delegation": {
+      "raw": 214,
+      "per_10k": 2.17
+    },
+    "protocols": {
+      "raw": 1240,
+      "per_10k": 12.56
+    }
+  },
+  "videos_mentioning": {
+    "autonomy": 73,
+    "human_in_loop": 115,
+    "registration": 63,
+    "authorization": 113,
+    "accountability": 100,
+    "delegation": 64,
+    "protocols": 62
+  },
+  "videos_mentioning_pct": {
+    "autonomy": 53,
+    "human_in_loop": 83,
+    "registration": 46,
+    "authorization": 82,
+    "accountability": 72,
+    "delegation": 46,
+    "protocols": 45
+  },
+  "top_channels": [
+    [
+      "IBM Technology",
+      15
+    ],
+    [
+      "Google Cloud Tech",
+      7
+    ],
+    [
+      "AI Master",
+      6
+    ],
+    [
+      "AWS Events",
+      5
+    ],
+    [
+      "KodeKloud",
+      4
+    ],
+    [
+      "Simplilearn",
+      3
+    ],
+    [
+      "Greg Isenberg",
+      3
+    ],
+    [
+      "Intellipaat",
+      2
+    ],
+    [
+      "IBM Technology and IBM Developer",
+      2
+    ],
+    [
+      "freeCodeCamp.org",
+      2
+    ],
+    [
+      "codebasics",
+      2
+    ],
+    [
+      "Tina Huang",
+      2
+    ]
+  ]
+}

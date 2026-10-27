@@ -1,0 +1,61 @@
+{
+  "n_videos": 138,
+  "total_words": 987600,
+  "lexicon_per_10k": {
+    "autonomy": {
+      "raw": 271,
+      "per_10k": 2.74
+    },
+    "human_in_loop": {
+      "raw": 174,
+      "per_10k": 1.76
+    },
+    "registration": {
+      "raw": 414,
+      "per_10k": 4.19
+    },
+    "authorization": {
+      "raw": 1078,
+      "per_10k": 10.92
+    },
+    "accountability": {
+      "raw": 290,
+      "per_10k": 2.94
+    },
+    "delegation": {
+      "raw": 214,
+      "per_10k": 2.17
+    },
+    "protocols": {
+      "raw": 1240,
+      "per_10k": 12.56
+    }
+  },
+  "videos_mentioning": {
+    "autonomy": 73,
+    "human_in_loop": 51,
+    "registration": 63,
+    "authorization": 113,
+    "accountability": 81,
+    "delegation": 64,
+    "protocols": 62
+  },
+  "videos_mentioning_pct": {
+    "autonomy": 53,
+    "human_in_loop": 37,
+    "registration": 46,
+    "authorization": 82,
+    "accountability": 59,
+    "delegation": 46,
+    "protocols": 45
+  },
+  "lexicon_specification": {
+    "autonomy": "\\b(autonomous(ly)?|on its own|by itself|without human|self-directed|independently)\\b",
+    "human_in_loop": "\\b(human in the loop|human-in-the-loop|approval|approve|oversight|supervis\\w+)\\b",
+    "registration": "\\b(agent card|agentcard|identity|identities|registr\\w+|discover\\w+|credential\\w*|directory)\\b",
+    "authorization": "\\b(permission\\w*|access|authoriz\\w+|guardrail\\w*|control\\w*|security|scope\\w*|policy|policies)\\b",
+    "accountability": "\\b(accountab\\w+|audit\\w*|logs?|logged|logging|traceab\\w+|liabilit\\w+|responsib\\w+|compliance)\\b",
+    "delegation": "\\b(delegate\\w*|delegation|hand off|handoff|on your behalf|on behalf of|assign\\w*)\\b",
+    "protocols": "\\b(mcp|model context protocol|a2a|agent2agent|agent-to-agent protocol)\\b"
+  }
+}

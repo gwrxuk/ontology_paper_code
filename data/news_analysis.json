@@ -1,0 +1,112 @@
+{
+  "n": 100,
+  "frames": {
+    "machine-as-actor": 12,
+    "human/org-as-actor": 31,
+    "other": 46,
+    "explainer/question": 11
+  },
+  "top_domains": [
+    [
+      "prnewswire.com",
+      8
+    ],
+    [
+      "manilatimes.net",
+      8
+    ],
+    [
+      "finance.yahoo.com",
+      6
+    ],
+    [
+      "pymnts.com",
+      5
+    ],
+    [
+      "bankinfosecurity.com",
+      4
+    ],
+    [
+      "forbes.com",
+      4
+    ],
+    [
+      "finanznachrichten.de",
+      4
+    ],
+    [
+      "montrealgazette.com",
+      3
+    ],
+    [
+      "bestmediainfo.com",
+      2
+    ],
+    [
+      "fool.com",
+      2
+    ],
+    [
+      "americanbanker.com",
+      2
+    ],
+    [
+      "siliconangle.com",
+      2
+    ]
+  ],
+  "countries": [
+    [
+      "United States",
+      54
+    ],
+    [
+      "India",
+      17
+    ],
+    [
+      "Philippines",
+      8
+    ],
+    [
+      "United Kingdom",
+      6
+    ],
+    [
+      "Canada",
+      4
+    ],
+    [
+      "Germany",
+      4
+    ],
+    [
+      "South Africa",
+      2
+    ],
+    [
+      "Australia",
+      2
+    ],
+    [
+      "Switzerland",
+      1
+    ],
+    [
+      "Japan",
+      1
+    ]
+  ],
+  "by_month": {
+    "202604": 30,
+    "202605": 35,
+    "202606": 34,
+    "202607": 1
+  },
+  "headline_mechanism_mentions": {
+    "registration": 4,
+    "authorization": 16,
+    "accountability": 5
+  }
+}
