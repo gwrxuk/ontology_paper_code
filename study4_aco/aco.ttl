@@ -54,7 +54,7 @@ aco:requiresPermission a owl:ObjectProperty ;
 
 aco:grantedTo a owl:ObjectProperty ;
     rdfs:domain aco:Permission ; rdfs:range aco:Actor ;
-    rdfs:comment "Agents and humans share one permission model (Palantir: agent access matching human permissions)." .
+    rdfs:comment "Agents and humans share one permission model (Palantir: agent activity is governed by the same security policies as human usage)." .
 
 aco:requiresHumanApproval a owl:DatatypeProperty ;
     rdfs:domain aco:ActionType ; rdfs:range xsd:boolean ;

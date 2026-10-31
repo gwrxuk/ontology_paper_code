@@ -1,6 +1,6 @@
 # Code for the paper
 
-This folder collects the scripts behind the Chinese manuscript (`chatgpt/v41_natural.docx`) and maps each one to the terms, numbers, tables and figures used in the paper.
+This folder collects the scripts behind the Chinese manuscript (`chatgpt/v46_natural.docx`) and maps each one to the terms, numbers, tables and figures used in the paper.
 
 The files here are **copies**. The originals are still in `data/`, `data/yt/`, `artifact/` and `chatgpt/`. Most scripts use absolute paths to those original locations, so they read and write the data in the repository's `data/` folder, not in this folder. Copies of the datasets the paper reports are in `paper_code/data/` (see the Datasets section). The tables below name output files by their path inside `data/`, which is the same in both places.
 
@@ -62,19 +62,25 @@ paper_code/
 | Term in the paper | File |
 |---|---|
 | 以網路本體語言（OWL）撰寫的精簡本體論, 九個類別與八個屬性; 附錄二（一）, Turtle原始碼約80行 | `study4_aco/aco.ttl` |
-| 137行的Python參考實作; 附錄二（二） execute()依序檢查 | `study4_aco/agency_demo.py` (`execute()` at line 72) |
-| 系統的邊界則以五個情境測試 | `study4_aco/agency_demo.py`, Scenarios 1–5 (lines 119–132) |
+| 在A2A協定上實際運作的Python參考實作; 附錄二（二） | `a2a_sim/` at the repository root (a2a-sdk 1.2.3) |
+| 實例檔newsroom.ttl: retrieve_court_records, translate_article, publish_fact_check; desk-agent, intern-agent, editor-lin | `a2a_sim/ontology/newsroom.ttl` |
+| 註冊機構（registry）, JWS簽章驗證 | `a2a_sim/registry.py` |
+| 研究代理人的執行器（ACOExecutor）依序檢查五個條件 | `a2a_sim/research_agent.py` (`ACOExecutor.execute`) |
+| 系統的邊界則以七個情境測試; 稽核日誌共12筆 | `a2a_sim/run_scenarios.py` → `a2a_sim/results/scenarios.json`, `a2a_sim/results/audit.ttl` |
 
-Run it with `python3 paper_code/study4_aco/agency_demo.py`. The output is deterministic.
+Run it with `cd a2a_sim && .venv/bin/python run_scenarios.py` (setup in `a2a_sim/README.md`). Task IDs and timestamps change on each run; the seven task states do not.
+
+`study4_aco/agency_demo.py` is the earlier in-memory, standard-library-only demonstration that versions up to v45 described (137 lines, five scenarios). v46 reports the A2A version instead.
 
 ## Figures
 
-| Figure in the paper | Image embedded in v41 | Script |
+| Figure in the paper | Image embedded in the paper | Script |
 |---|---|---|
 | 圖1 研究中的代理人轉向 | `figures/fig1_bibliometrics.png` | `figures/make_figures.py` |
 | 圖2 GitHub上代理人框架與協定的採用 | `figures/fig2_github.png` | `figures/make_figures.py` |
 | 圖3 新聞論述中的能動性 | `chatgpt/fig3_news_v29.png` | **not found.** `make_figures.py` draws the earlier English version from the pilot data. |
 | 圖4 YouTube逐字稿中的能動性詞庫 | `chatgpt/fig4_youtube_v29.png` | **not found.** `recompute_yt_lexicons.py` draws an earlier layout (`fig4_youtube_recomputed.png`) from the same numbers. |
+| 圖6 ACO參考實作的架構; 圖7 研究代理人執行器的判斷流程與七個測試情境 | `chatgpt/fig6_a2a_arch_zh.png`, `chatgpt/fig7_a2a_flow_zh.png` | `figures/make_fig67_a2a_zh.py` |
 | 圖5 能動性配置本體論（ACO）的架構 | `chatgpt/fig5_ontology_zh_v34.png` | closest is `figures/make_fig5_zh.py` (Chinese). The v34 image was edited after it. `make_fig5.py` draws the English version. |
 
 ## Datasets (`paper_code/data/`)
